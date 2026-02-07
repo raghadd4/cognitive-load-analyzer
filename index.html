@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Cognitive Load Analyzer</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Cognitive Load Analyzer</h1>
+        <p>A lightweight tool to analyze distraction impact and academic workload.</p>
+    </header>
+
+    <div class="grid">
+        <section class="card">
+            <h2>📱 Distraction Cost</h2>
+            <input id="dName" placeholder="Distraction name" />
+            <input id="dImportance" type="number" placeholder="Importance (1–5)" min="1" max="5" />
+            <input id="dTime" type="number" placeholder="Time wasted (minutes)" min="0" />
+            <button onclick="addDistraction()">Add Distraction</button>
+            <ul id="distractionList"></ul>
+        </section>
+
+        <section class="card">
+            <h2>📚 Academic Load</h2>
+            <input id="sName" placeholder="Subject name" />
+            <input id="sHours" type="number" placeholder="Hours per week" min="0" />
+            <button onclick="addSubject()">Add Subject</button>
+            <ul id="subjectList"></ul>
+        </section>
+    </div>
+
+    <section class="card highlight">
+        <h2>🧠 Cognitive Analysis</h2>
+        <button class="analyze-btn" onclick="analyze()">Analyze</button>
+        <div id="results"></div>
+    </section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
